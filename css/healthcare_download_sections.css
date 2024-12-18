@@ -1,0 +1,71 @@
+.leading_healthcare_section,
+.download_app_section {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  padding: 1rem .5rem;
+  margin-inline: auto;
+  max-width: 1400px;
+}
+
+.leading_healthcare_section > img,
+.download_app_section > img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+}
+
+.leading_healthcare_section > div,
+.download_app_section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.leading_healthcare_section h3,
+.download_app_section h3 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.leading_healthcare_section span,
+.download_app_section span {
+  width: 56px;
+  height: 2px;
+  display: block;
+  background-color: black;
+}
+
+.leading_healthcare_section p,
+.download_app_section p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  max-width: 450px;
+  margin-top: 1rem;
+}
+
+.leading_healthcare_section button.more_btn,
+.download_app_section button.more_btn {
+  margin: 0;
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 1000px)  {
+  .leading_healthcare_section,
+  .download_app_section {
+    flex-direction: row;
+    align-content: space-between;
+  }
+
+  .download_app_section > img {
+    order: 1;
+  }
+}

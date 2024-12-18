@@ -1,0 +1,135 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+  margin: 1em 0px;
+  padding: 0 10px;
+  position: relative;
+  height: 57px;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  height: fit-content;
+}
+
+.logo_circle {
+  width: 41px;
+  height: 41px;
+  background-color: #458FF6;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_circle > span {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32.63px;
+  text-align: center;
+  color: white;
+}
+
+.logo > span:last-child {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30.12px;
+  text-align: left;
+  height: fit-content;
+}
+
+/* Navigation styles */
+nav {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  display: flex;
+  background-color: white;
+  padding: 5px 5px 0px;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+nav > ul {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+nav > ul > li:first-child > a {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.59px;
+  color: #1F1534;
+}
+
+nav > ul a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22.59px;
+  color: #1f1534;
+  transition: color .3s;
+}
+
+nav > ul a:hover {
+  color: #1F1534;
+}
+
+#menu_icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: #1F1534;
+}
+
+#check {display: none;}
+
+.checkbtn {
+  order: 1;
+}
+
+#check:checked ~ ul {
+  display: flex;
+}
+
+#check:checked + nav {
+  background-color: red;
+}
+
+@media only screen and (min-width: 800px) {
+  body, nav {
+    position: static;
+  }
+
+  .checkbtn {
+    display: none;
+  }
+
+  nav {
+    border: none;
+    border-radius: 0%;
+    box-shadow: none;
+    display: flex;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+}
